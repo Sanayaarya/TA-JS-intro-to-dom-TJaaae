@@ -118,21 +118,28 @@ let books = [
 
 
 let html = document.querySelector("body");
+html.style.padding = "10px 30px"
+html.style.backgroundColor = "rgb(247, 218, 187)"
 let contain = document.createElement("div");
+     contain.style.padding = "20px"
      contain.style.display = "flex";
      contain.style.flexWrap = "wrap";
-     contain.style.justifyContent = "space-between"
+     contain.style.justifyContent = "space-evenly"
      contain.style.backgroundColor = "rgb(247, 218, 187)"
+     
 
 books.forEach((e)=>{
    let div = document.createElement("div");
+   div.style.width = "300px"
+   div.style.backgroundColor = "white"
    div.style.padding = "20px"
+   div.style.margin = "30px 20px"
    let h1 = document.createElement("h1")
    h1.style.textAlign = "centre"
    h1.innerText=`${e.isbn}`
    let img = document.createElement("img");
-   img.style.height = "200px";
-   img.style.width = "370px";
+   img.style.height = "300px";
+   img.style.width = "250px";
    img.src = `${e.image}`;
    let h2 = document.createElement("h2");
    h2.style.fontSize = "22px"
@@ -144,7 +151,31 @@ books.forEach((e)=>{
    let btn = document.createElement("button");
    btn.innerText = "Read More";
    btn.style.textAlign="center"
+   btn.style.paddingRight = "12px"
    div.append(img,h2,author,btn);
    contain.append(div);
    html.append(contain);
 })
+
+
+// let rootElement = document.querySelector("ul")
+
+// allBooks.books.forEach((book) => {
+//   let li = document.createElement("li")
+//   let img = document.createElement("img")
+//   img.src = book.image;
+//   img.alt = book.title;
+//   let h2 = document.createElement("h2")
+//   h2.innerText = book.title;
+//   let p = document.createElement("p")
+//   p.innerText = "author:"
+//   let span = document.createElement("span");
+//   let authorName = document.createTextNode(
+//   book.author
+// );
+// span.append(authorName);
+// p.append(span);
+// let button = document.createElement("button");
+// button.innerText = "Buy Now";
+// li.append(img,h2,p,button);
+// });
