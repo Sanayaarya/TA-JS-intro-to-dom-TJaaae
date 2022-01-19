@@ -19,3 +19,8 @@ h1,
 h2 {
   text-align: center;
 }
+h1{
+  text-align: center;
+  padding: 20px;
+  background-color: rgb(18, 148, 234);
+}
